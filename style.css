@@ -1,3 +1,4 @@
+/* === BASE === */
 body {
   margin: 0;
   background-color: #000;
@@ -16,13 +17,16 @@ body {
   width: 100%;
 }
 
+/* === TITLE === */
 .title {
   font-weight: 900; /* Roboto Black */
   font-size: 3.6em;
   text-transform: uppercase;
   margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
+/* === DESCRIPTION === */
 .tagline {
   font-weight: 600; /* Roboto SemiBold */
   font-size: 1.1em;
@@ -31,6 +35,7 @@ body {
   margin-bottom: 60px;
 }
 
+/* === LINKS === */
 .links {
   display: flex;
   flex-direction: column;
@@ -55,7 +60,7 @@ body {
   transform: scale(1.01);
 }
 
-/* Chat button — separated and styled */
+/* === CHAT BUTTON === */
 .chat-wrapper {
   margin-top: 50px;
 }
@@ -78,4 +83,28 @@ body {
   background: #fff;
   color: #000;
   transform: scale(1.03);
+}
+
+/* === MOBILE ADAPTATION === */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2em;
+  }
+
+  .tagline {
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .links a,
+  .chat-button {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.9em;
+  }
+
+  .container {
+    padding: 20px;
+  }
 }
