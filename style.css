@@ -4,52 +4,87 @@ body {
   color: #fff;
   font-family: 'Inter', sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 30px;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 800px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .logo {
   width: 120px;
   margin-bottom: 20px;
+  animation: float 5s ease-in-out infinite;
 }
 
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5em;
-  margin: 0 0 20px;
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 3em;
+  margin: 10px 0;
   color: #00ffcc;
+  letter-spacing: 1px;
 }
 
-.description {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 40px;
+.tagline {
+  font-size: 1.4em;
+  margin: 20px 0 50px;
+  color: #ccc;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
+  align-items: center;
 }
 
 .links a {
   font-family: 'Share Tech Mono', monospace;
   text-decoration: none;
-  background: #00ffcc;
-  color: #000;
-  padding: 12px 20px;
-  border-radius: 8px;
+  background: rgba(0, 255, 204, 0.12);
+  color: #00ffcc;
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  padding: 16px 24px;
+  border-radius: 10px;
+  min-width: 300px;
+  font-size: 1.1em;
   transition: all 0.3s ease;
+  animation: breathe 4s ease-in-out infinite;
 }
 
 .links a:hover {
-  background: #fff;
-  color: #000;
+  background: rgba(0, 255, 204, 0.25);
+  color: #fff;
+  border-color: #00ffcc;
+  transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+  margin-top: 80px;
+  font-size: 0.95em;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
