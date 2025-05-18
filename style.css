@@ -1,41 +1,48 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* === BASE === */
 body {
-  margin: 0;
   background-color: #000;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   text-align: center;
   padding: 40px 20px;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
   width: 100%;
 }
 
 /* === TITLE === */
 .title {
-  font-weight: 900; /* Roboto Black */
+  font-weight: 900;
   font-size: 3.6em;
   text-transform: uppercase;
   margin-bottom: 24px;
   letter-spacing: 1px;
+  word-wrap: break-word;
 }
 
-/* === DESCRIPTION === */
+/* === TAGLINE === */
 .tagline {
-  font-weight: 600; /* Roboto SemiBold */
+  font-weight: 600;
   font-size: 1.1em;
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 60px;
+  word-wrap: break-word;
 }
 
-/* === LINKS === */
+/* === BUTTONS === */
 .links {
   display: flex;
   flex-direction: column;
@@ -43,7 +50,7 @@ body {
 }
 
 .links a {
-  font-weight: 400; /* Roboto Regular */
+  font-weight: 400;
   background: #222;
   color: #fff;
   text-decoration: none;
@@ -53,6 +60,7 @@ body {
   letter-spacing: 0.5px;
   font-size: 0.95em;
   transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
 }
 
 .links a:hover {
@@ -60,23 +68,25 @@ body {
   transform: scale(1.01);
 }
 
-/* === CHAT BUTTON === */
+/* === ENTER THE CHAT === */
 .chat-wrapper {
   margin-top: 50px;
 }
 
 .chat-button {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 16px 28px;
   background: transparent;
   color: #fff;
-  font-weight: 600; /* Roboto SemiBold */
+  font-weight: 600;
   border: 2px solid #fff;
   border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   font-size: 1em;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .chat-button:hover {
@@ -85,7 +95,7 @@ body {
   transform: scale(1.03);
 }
 
-/* === MOBILE ADAPTATION === */
+/* === MOBILE === */
 @media (max-width: 600px) {
   .title {
     font-size: 2.2em;
@@ -94,17 +104,11 @@ body {
   .tagline {
     font-size: 1em;
     line-height: 1.5;
-    padding: 0 10px;
   }
 
   .links a,
   .chat-button {
-    width: 100%;
-    padding: 14px 18px;
     font-size: 0.9em;
-  }
-
-  .container {
-    padding: 20px;
+    padding: 14px 18px;
   }
 }
