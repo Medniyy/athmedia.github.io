@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-color: #000;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,17 +17,17 @@ body {
 }
 
 .title {
+  font-weight: 900; /* Roboto Black */
   font-size: 3.6em;
-  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   margin-bottom: 24px;
 }
 
 .tagline {
+  font-weight: 600; /* Roboto SemiBold */
   font-size: 1.1em;
-  color: #ccc;
   line-height: 1.6;
+  color: #ccc;
   margin-bottom: 60px;
 }
 
@@ -38,15 +38,15 @@ body {
 }
 
 .links a {
-  text-decoration: none;
+  font-weight: 400; /* Roboto Regular */
   background: #222;
   color: #fff;
+  text-decoration: none;
   padding: 16px 24px;
   border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.95em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-size: 0.95em;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -55,16 +55,27 @@ body {
   transform: scale(1.01);
 }
 
-/* Unique style for the "ENTER THE CHAT" button */
+/* Chat button — separated and styled */
+.chat-wrapper {
+  margin-top: 50px;
+}
+
 .chat-button {
+  display: inline-block;
+  padding: 16px 28px;
   background: transparent;
-  border: 2px solid #fff;
   color: #fff;
-  margin-top: 40px;
+  font-weight: 600; /* Roboto SemiBold */
+  border: 2px solid #fff;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 1em;
+  transition: all 0.3s ease;
 }
 
 .chat-button:hover {
   background: #fff;
   color: #000;
-  transform: scale(1.01);
+  transform: scale(1.03);
 }
