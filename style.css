@@ -5,22 +5,20 @@ body {
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
-  justify-content: center;
-  padding: 40px 20px;
 }
 
 .container {
+  flex: 1;
   max-width: 900px;
-  width: 100%;
-  animation: fadeIn 1.5s ease-in-out;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
 }
 
 .logo {
-  width: 130px;
+  width: 120px;
   margin-bottom: 20px;
   animation: float 5s ease-in-out infinite;
 }
@@ -28,22 +26,24 @@ body {
 .title {
   font-family: 'Permanent Marker', cursive;
   font-size: 4.2em;
-  margin: 10px 0 20px;
   color: #fff;
-  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
 }
 
 .tagline {
-  font-size: 1.5em;
-  color: #ccc;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 1.7em;
+  color: #fff;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .links {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
   justify-content: center;
 }
@@ -51,46 +51,33 @@ body {
 .links a {
   font-family: 'Share Tech Mono', monospace;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.05);
+  background: #1a1a1a;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 16px 28px;
-  border-radius: 12px;
-  min-width: 400px;
-  max-width: 90%;
-  font-size: 1.05em;
+  padding: 18px 32px;
+  border-radius: 10px;
+  min-width: 420px;
+  max-width: 100%;
+  font-size: 1.1em;
   text-transform: uppercase;
-  transition: all 0.3s ease;
-  animation: breathe 6s ease-in-out infinite;
-  backdrop-filter: blur(1.5px);
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
 }
 
 .links a:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #fff;
+  background: #2a2a2a;
   transform: scale(1.015);
 }
 
 /* Footer */
 footer {
-  margin-top: auto;
-  padding-top: 60px;
+  text-align: center;
+  padding: 40px 20px 20px;
   font-size: 0.95em;
   color: #444;
   font-family: 'Inter', sans-serif;
 }
 
 /* Animations */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes breathe {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-}
-
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
